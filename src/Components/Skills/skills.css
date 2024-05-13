@@ -24,7 +24,7 @@
 
 .skill_div2 {
   width: 45%;
-  height: 400px;
+  height: 500px;
   padding: 2%;
   margin: 1%;
   /* border: 2px solid red; */
@@ -43,11 +43,22 @@
 .skill_Name:hover {
   color: black;
 }
-
+.title-projects-integrates{
+  color: teal;
+  font-size: 350%;
+  font-weight: 700;
+  font-family: "Bentham", serif;
+  font-family: "Martian Mono", monospace;
+  text-align: center;
+}
 @media screen and (width<1200px) {
   .Skills_container {
     height: 85vh;
     overflow: scroll;
+  }
+  .skill_div2{
+    width: 100%;
+    height: 80%;
   }
 }
 
@@ -106,14 +117,31 @@
   }
   .skill_div2 {
     width: 100%;
-    height: 400px;
+    height: 500px;
     padding: 2%;
     margin: 1%;
     /* border: 2px solid red; */
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   }
 }
-
+@media screen and (width<=500px) {
+  .title-projects-integrates{
+    font-size: 250%;
+  }
+  .size-image {
+    width: 100%;
+    height:25vh;
+  }
+  .skill_div2{
+    width: 100%;
+    height: 600px;
+  }
+  
+  /* .size-image {
+    width: 100%;
+    height: 80%;
+  } */
+}
 .size-image {
   width: 100%;
   height: 80%;

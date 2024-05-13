@@ -82,7 +82,7 @@ function Skills() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <p className="aboutme_left_line2_title">{t('Projetos')}</p>
+      <p className="title-projects-integrates">{t('api')}</p>
       <div className="Skills_container">
         <div className="technicalSkills_div">
           {projects.map((project, index) => (
