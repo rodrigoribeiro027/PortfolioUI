@@ -43,6 +43,7 @@
   font-family: "Bentham", serif;
   font-family: "Martian Mono", monospace;
 }
+
 .aboutme_left_line2_title {
   color: teal;
   font-size: 350%;
@@ -51,6 +52,7 @@
   font-family: "Martian Mono", monospace;
   text-align: center;
 }
+
 .aboutme_left_line3 {
   color: rgb(62, 62, 62);
   font-size: 150%;
@@ -72,8 +74,18 @@
 .aboutme_intro {
   color: rgb(62, 62, 62);
   font-size: 150%;
-  font-weight: 350;
+  font-weight: 600;
   text-align: justify;
+}
+
+@media screen and (width <1450px) {
+  .aboutme_intro {
+    color: rgb(62, 62, 62);
+    font-size: 100%;
+    font-weight: 600;
+    text-align: justify;
+
+  }
 }
 
 @media screen and (width <876px) {
@@ -82,6 +94,8 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+
 
   .aboutme_container {
     width: 90%;
@@ -122,6 +136,7 @@
     font-weight: 400;
     text-align: justify;
   }
+
   .aboutme_right_container {
     padding-bottom: 10%;
     margin-bottom: 5%;
@@ -196,6 +211,7 @@
 
     /* scroll-behavior: smooth; */
   }
+
   .technicalSkills_div {
     display: grid;
   }
@@ -213,6 +229,7 @@
 
     /* border: 2px solid red; */
   }
+
   .skill_div:nth-child(even) {
     width: 100%;
     display: flex;
