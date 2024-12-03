@@ -52,7 +52,7 @@ function Skills() {
     {
       title: t('api-5-title'),
       imgSrc: api5,
-      description:  t('api-5-description'),
+      description: t('api-5-description'),
       githubLink: "https://github.com/EquipeGfour/API-5Semestre-OracleAcademy"
     },
     {
@@ -62,7 +62,19 @@ function Skills() {
       githubLink: "https://github.com/EquipeGfour/API-6-Semestre-Dom-Rock"
     }
   ];
-
+  const username = 'rodrigoribeiro027';
+  const url = `https://api.github.com/users/${username}/repos`;
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const reposList = document.getElementById('repos-list');
+      data.slice(0, 5).forEach(repo => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+        reposList.appendChild(listItem);
+      });
+    })
+    .catch(error => console.error('Erro ao carregar repositórios:', error));
   return (
     <React.Fragment>
       <Modal show={show} onHide={handleClose}>
@@ -78,7 +90,7 @@ function Skills() {
             {t('fechar')}
           </Button>
           <Button variant="primary" onClick={() => handleGithub(selectedProject.githubLink)}>
-          {t('Ver')} GitHub
+            {t('Ver')} GitHub
           </Button>
         </Modal.Footer>
       </Modal>
@@ -96,6 +108,12 @@ function Skills() {
           ))}
         </div>
       </div>
+      <p className="title-projects-integrates">{t('Outrosprojetos')}</p>
+      <div className="github-repos-container">
+        <h3 className="github-repos-title">{t('meusRepositorios')}</h3>
+        <ul id="repos-list" className="github-repos-list"></ul>
+      </div>
+      <br />
     </React.Fragment>
   );
 }

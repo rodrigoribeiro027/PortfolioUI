@@ -13,7 +13,19 @@ import { useTranslation } from 'react-i18next';
 
 function Aboutme() {
   const { t, i18n: { changeLanguage, language } } = useTranslation();
-
+  const username = 'rodrigoribeiro027';
+  const url = `https://api.github.com/users/${username}/repos`;
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const reposList = document.getElementById('repos-list');
+      data.slice(0, 5).forEach(repo => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+        reposList.appendChild(listItem);
+      });
+    })
+    .catch(error => console.error('Erro ao carregar repositórios:', error));
   return (
     <React.Fragment>
       <div className="aboutme_container">
@@ -38,54 +50,54 @@ function Aboutme() {
       </div>
       <p className="aboutme_left_line2_title">{t('habilidades')}</p>
       <div className="Skills_container">
-          <div className="technicalSkills_div">
-            <div className="skill_div">
-              <h3 className="skill_Name">HTML5</h3>
-              <img src={HTML5} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">CSS</h3>
-              <img src={CSSimg} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">JavaScript</h3>
-              <img src={JSimg} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">Typescript</h3>
-              <img src={typescript} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">REACT JS</h3>
-              <img src={Reactimg} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">Vue</h3>
-              <img src={Vueimg} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">Git</h3>
-              <img src={GitImg} className="skill_img" alt="" />
-              <p className="skill_details">2+ {t('expyears')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">MY SQL</h3>
-              <img src={Mysqlimg} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
-            <div className="skill_div">
-              <h3 className="skill_Name">Mongo Db</h3>
-              <img src={Mongodbimg} className="skill_img" alt="" />
-              <p className="skill_details">1 {t('expyear')}</p>
-            </div>
+        <div className="technicalSkills_div">
+          <div className="skill_div">
+            <h3 className="skill_Name">HTML5</h3>
+            <img src={HTML5} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">CSS</h3>
+            <img src={CSSimg} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">JavaScript</h3>
+            <img src={JSimg} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">Typescript</h3>
+            <img src={typescript} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">REACT JS</h3>
+            <img src={Reactimg} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">Vue</h3>
+            <img src={Vueimg} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">Git</h3>
+            <img src={GitImg} className="skill_img" alt="" />
+            <p className="skill_details">2+ {t('expyears')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">MY SQL</h3>
+            <img src={Mysqlimg} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
+          </div>
+          <div className="skill_div">
+            <h3 className="skill_Name">Mongo Db</h3>
+            <img src={Mongodbimg} className="skill_img" alt="" />
+            <p className="skill_details">1 {t('expyear')}</p>
           </div>
         </div>
+      </div>
     </React.Fragment>
   );
 }

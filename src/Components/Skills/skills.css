@@ -30,6 +30,7 @@
   /* border: 2px solid red; */
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
+
 .skill_Name {
   color: white;
   transition: 0.5s;
@@ -43,7 +44,8 @@
 .skill_Name:hover {
   color: black;
 }
-.title-projects-integrates{
+
+.title-projects-integrates {
   color: teal;
   font-size: 350%;
   font-weight: 700;
@@ -51,12 +53,14 @@
   font-family: "Martian Mono", monospace;
   text-align: center;
 }
+
 @media screen and (width<1200px) {
   .Skills_container {
     height: 85vh;
     overflow: scroll;
   }
-  .skill_div2{
+
+  .skill_div2 {
     width: 100%;
     height: 80%;
   }
@@ -72,6 +76,7 @@
 
     /* scroll-behavior: smooth; */
   }
+
   .technicalSkills_div {
     display: grid;
   }
@@ -89,6 +94,7 @@
 
     /* border: 2px solid red; */
   }
+
   .skill_div:nth-child(even) {
     width: 100%;
     display: flex;
@@ -111,10 +117,12 @@
     display: block;
     width: 25%;
   }
+
   .size-image {
     width: 100%;
     height: 80%;
   }
+
   .skill_div2 {
     width: 100%;
     height: 500px;
@@ -124,30 +132,115 @@
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   }
 }
+
 @media screen and (width<=500px) {
-  .title-projects-integrates{
+  .title-projects-integrates {
     font-size: 250%;
   }
+
   .size-image {
     width: 100%;
-    height:25vh;
+    height: 25vh;
   }
-  .skill_div2{
+
+  .skill_div2 {
     width: 100%;
     height: 600px;
   }
-  
+
   /* .size-image {
     width: 100%;
     height: 80%;
   } */
 }
+
 .size-image {
   width: 100%;
   height: 80%;
 }
 
-.modal-image-modal{
+.modal-image-modal {
   width: 100%;
-    height: 80%;
+  height: 80%;
+}
+
+.github-repos {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.github-repos-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.repos-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.repos-list li a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.repos-list li a:hover {
+  text-decoration: underline;
+}
+
+.github-repos-container {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f5f5f5;
+  /* Cor de fundo neutra */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.github-repos-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  /* Cor do título */
+  margin-bottom: 10px;
+}
+
+.github-repos-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.github-repos-list li {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.github-repos-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-repos-list a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #45C04B;
+  /* Cor combinando com botões */
+  font-weight: bold;
+}
+
+.github-repos-list a:hover {
+  color: #ffa500;
+  /* Cor ao passar o mouse */
 }
